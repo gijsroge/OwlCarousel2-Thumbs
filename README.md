@@ -15,10 +15,10 @@ $(document).ready(function(){
 ##### Add data-thumb attribute to your slides
 ```html
 <div class="owl-carousel">
-    <div data-thumb='Content of your thumbnail (can ben anything)'> Your Content </div>
-    <div data-thumb='Content of your thumbnail (can ben anything)'> Your Content </div>
-    <div data-thumb='Content of your thumbnail (can ben anything)'> Your Content </div>
-    <div data-thumb='Content of your thumbnail (can ben anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
 </div>
 ```
 
