@@ -41,4 +41,16 @@ Class that will be used on the thumbnail container
 options: Class/String
 Class that will be used on the thumbnail item's
 
+##### All default values
+```javascript
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    thumbs: true,
+    thumbImage: false,
+    thumbContainerClass: 'owl-thumbs',
+    thumbItemClass: 'owl-thumb-item'
+  });
+});
+```
+
 </> with <3 in Belgium by [@GijsRoge](https://twitter.com/GijsRoge)
