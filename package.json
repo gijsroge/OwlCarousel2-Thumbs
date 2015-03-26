@@ -3,7 +3,7 @@
   "title": "Owl Carousel 2 Thumbnails",
   "description": "Enables thumbnail support for Owl Carousel 2.0",
   "version": "0.1.0",
-  "main": "dist/OwlCarousel2Thumbs.min.js",
+  "main": "dist/owl.carousel2.thumbs.min.js",
   "homepage": "https://github.com/gijsroge/OwlCarousel2-Thumbs",
   "author": {
     "name": "Gijs Rogé",
