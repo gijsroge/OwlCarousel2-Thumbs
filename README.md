@@ -45,9 +45,16 @@ Class that will be used on the thumbnail item's
 ```javascript
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
+    // Enable thumbnails
     thumbs: true,
+  
+    // When using only images in your slide (like the [demo](http://gijsroge.github.io/owl-carousel2-thumbs)) use this option to dynamicly create thumbnails without using the attribute data-thumb.
     thumbImage: false,
+    
+    //Class that will be used on the thumbnail container
     thumbContainerClass: 'owl-thumbs',
+    
+    //Class that will be used on the thumbnail item's
     thumbItemClass: 'owl-thumb-item'
   });
 });
