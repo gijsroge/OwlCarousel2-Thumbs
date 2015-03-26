@@ -43,4 +43,14 @@ $(document).ready(function(){
 });
 ```
 
+## npm
+```
+npm install owl.carousel2.thumbs
+```
+
+## bower
+```
+bower install owl.carousel2.thumbs
+```
+
 </> with <3 in Belgium by [@GijsRoge](https://twitter.com/GijsRoge)
