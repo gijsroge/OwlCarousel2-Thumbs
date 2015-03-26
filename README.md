@@ -25,19 +25,19 @@ $(document).ready(function(){
 #### [demo](http://gijsroge.github.io/owl-carousel2-thumbs)
 
 # Available options
-### Thumbs
+#### Thumbs
 options: true/false
 Enable thumbnails
 
-### thumbImage
+#### thumbImage
 options: true/false
 When using only images in your slide (like the [demo](http://gijsroge.github.io/owl-carousel2-thumbs)) use this option to dynamicly create thumbnails without using the attribute data-thumb.
 
-### ThumbContainerClass
+#### ThumbContainerClass
 options: Class/String
 Class that will be used on the thumbnail container
 
-### thumbItemClass
+#### thumbItemClass
 options: Class/String
 Class that will be used on the thumbnail item's
 
