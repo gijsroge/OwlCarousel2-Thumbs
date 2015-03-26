@@ -1,5 +1,5 @@
 {
-  "name": "Owl Carousel 2 Thumbnails",
+  "name": "owl.carousel2.thumbs",
   "version": "0.1.0",
   "homepage": "https://github.com/gijsroge/OwlCarousel2-Thumbs",
   "authors": [
@@ -26,9 +26,6 @@
     "bower_components",
     "Gruntfile.js"
   ],
-  "dependencies": {
-    "owl.carousel": ">= 2.0.0-beta.2.4"
-  },
   "repository" :
   { 
     "type" : "git",
