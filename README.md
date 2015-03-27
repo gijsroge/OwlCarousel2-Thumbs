@@ -31,7 +31,7 @@ $(document).ready(function(){
     // Enable thumbnails
     thumbs: true,
   
-    // When using only images in your slide (like the demo) use this option to dynamicly create thumbnails without using the attribute data-thumb.
+    // When only using images in your slide (like the demo) use this option to dynamicly create thumbnails without using the attribute data-thumb.
     thumbImage: false,
     
     //Class that will be used on the thumbnail container
