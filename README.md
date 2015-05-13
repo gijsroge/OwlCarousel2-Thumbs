@@ -23,7 +23,7 @@ $(document).ready(function(){
 ```
 
 
-## User pre-rendered html as thumbnails (to prevent FOUC)
+## User pre-rendered html as thumbnails
 ```javascript
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
