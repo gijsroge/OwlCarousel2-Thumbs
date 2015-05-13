@@ -2,7 +2,7 @@
 Enables thumbnail support for Owl Carousel 2.0
 
 ## Quick start
-grab the [latest release](https://github.com/gijsroge/OwlCarousel2-Thumbs/archive/1.0.zip) and slam it behind the default owl carousel plugin.
+grab the [latest release](https://github.com/gijsroge/OwlCarousel2-Thumbs/archive/0.1.1.zip) and slam it behind the default owl carousel plugin.
 
 ##### Enable thumbs
 ```javascript
@@ -31,8 +31,8 @@ $(document).ready(function(){
     // Enable thumbnails
     thumbs: true,
   
-    // When using only images in your slide (like the demo) use this option to dynamicly create thumbnails without using the attribute data-thumb.
-    thumbImage: false,
+    // When only using images in your slide (like the demo) use this option to dynamicly create thumbnails without using the attribute data-thumb.
+    thumbImage: true,
     
     //Class that will be used on the thumbnail container
     thumbContainerClass: 'owl-thumbs',
