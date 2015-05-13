@@ -113,7 +113,6 @@
    * @protected
    */
   Thumbs.prototype.listen = function () {
-    console.log('listen');
 
     //set default options
     var options = this.owl.options;
@@ -148,7 +147,6 @@
    * @protected
    */
   Thumbs.prototype.render = function () {
-    console.log('render');
 
     //set default options
     var options = this.owl.options;
@@ -175,14 +173,11 @@
    * @protected
    */
   Thumbs.prototype.setActive = function() {
-    console.log('setActive');
 
     this.owl_currentitem = this.owl._current - (this.owl._clones.length / 2);
     if (this.owl_currentitem === this.owl._items.length) {
       this.owl_currentitem = 0;
     }
-
-    console.log(this.owl_currentitem);
 
     //set default options
     var options = this.owl.options;
@@ -190,7 +185,6 @@
     // set relative thumbnail container
     var thumbContainer = options.thumbPrerendered ? $('.'+options.thumbContainerClass+'[data-slider-id="'+this._identifier+'"]') : this._thumbcontent._thumbcontainer;
 
-    console.log(this._identifier);
     thumbContainer.children().filter('.active').removeClass('active');
     thumbContainer.children().eq(this.owl_currentitem).addClass('active');
   };
