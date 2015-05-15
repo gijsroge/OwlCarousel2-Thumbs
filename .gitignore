@@ -3,6 +3,8 @@ node_modules
 _site
 *.zip
 *.rar
+/.idea
+/demo
 
 # Ignore files beginning with a #
 \#*
