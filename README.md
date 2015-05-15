@@ -23,7 +23,7 @@ $(document).ready(function(){
 ```
 
 
-## User pre-rendered html as thumbnails
+## User pre-rendered html as thumbnails. **_recommended_**
 ```javascript
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
@@ -58,9 +58,9 @@ $(document).ready(function(){
     thumbs: true,
   
     // When only using images in your slide (like the demo) use this option to dynamicly create thumbnails without using the attribute data-thumb.
-    thumbImage: true,
+    thumbImage: false,
 
-    // Prerender thumbnails in html link with data attribute 'data-slider-id' (recommended).
+    // Enable this if you have pre-rendered thumbnails in your html instead of letting this plugin generate them. This is recommended as it will prevent FOUC
     thumbPrerendered: true,
     
     // Class that will be used on the thumbnail container
