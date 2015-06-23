@@ -122,7 +122,7 @@
         }
 
         //check what thumbitem has been clicked and move slider to that item
-        $(this._thumbcontent._thumbcontainer).on('click', 'button', $.proxy(function (e) {
+        $(this._thumbcontent._thumbcontainer).on('click', this._thumbcontent._thumbcontainer.children(), $.proxy(function (e) {
 
             // find relative slider
             this._identifier = $(e.target).closest('.' + options.thumbContainerClass).data('slider-id');
