@@ -123,7 +123,7 @@
         }
 
         //check what thumbitem has been clicked and move slider to that item
-        $(this._thumbcontent._thumbcontainer).on('click', 'button', $.proxy(function (e) {
+        $(this._thumbcontent._thumbcontainer).on('click', this._thumbcontent._thumbcontainer.children(), $.proxy(function (e) {
 
             // find relative slider
             this._identifier = $(e.target).closest('.' + options.thumbContainerClass).data('slider-id');
@@ -153,7 +153,11 @@
         var options = this.owl.options;
 
         //create thumbcontainer
-        this._thumbcontent._thumbcontainer = $('<div>').addClass(options.thumbContainerClass).appendTo(this.$element);
+        if (!options.thumbsPrerendered) {
+            this._thumbcontent._thumbcontainer = $('<div>').addClass(options.thumbContainerClass).appendTo(this.$element);
+        } else {
+            this._thumbcontent._thumbcontainer = $('.' + options.thumbContainerClass + '').appendTo(this.$element);
+        }
 
         //create thumb items
         var i;
@@ -186,7 +190,6 @@
 
         // set relative thumbnail container
         var thumbContainer = options.thumbPrerendered ? $('.' + options.thumbContainerClass + '[data-slider-id="' + this._identifier + '"]') : this._thumbcontent._thumbcontainer;
-
         thumbContainer.children().filter('.active').removeClass('active');
         thumbContainer.children().eq(this.owl_currentitem).addClass('active');
     };
