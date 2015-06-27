@@ -1,7 +1,7 @@
 /**
  * Thumbs Plugin
  * @version 2.0.0
- * @author Gijs Rogé
+ * @author Gijs RogÃ©
  * @license The MIT License (MIT)
  */
 (function ($, window, document, undefined) {
@@ -61,7 +61,7 @@
          */
         this._handlers = {
             'prepared.owl.carousel': $.proxy(function (e) {
-                if (e.namespace && this.owl.options.thumbs && !this.owl.options.thumbImage && !this.owl.options.thumbPrerendered && !this.owl.options.thumbImage) {
+                if (e.namespace && this.owl.options.thumbs && !this.owl.options.thumbImage && !this.owl.options.thumbsPrerendered && !this.owl.options.thumbImage) {
                     if ($(e.content).find('[data-thumb]').attr('data-thumb') !== undefined) {
                         this._thumbcontent.push($(e.content).find('[data-thumb]').attr('data-thumb'));
                     }
@@ -104,7 +104,8 @@
         thumbs: true,
         thumbImage: false,
         thumbContainerClass: 'owl-thumbs',
-        thumbItemClass: 'owl-thumb-item'
+        thumbItemClass: 'owl-thumb-item',
+        moveThumbsInside: false
     };
 
 
@@ -117,12 +118,12 @@
         //set default options
         var options = this.owl.options;
 
-        if (options.thumbPrerendered) {
+        if (options.thumbsPrerendered) {
             this._thumbcontent._thumbcontainer = $('.' + options.thumbContainerClass);
         }
 
         //check what thumbitem has been clicked and move slider to that item
-        $(this._thumbcontent._thumbcontainer).on('click', 'button', $.proxy(function (e) {
+        $(this._thumbcontent._thumbcontainer).on('click', this._thumbcontent._thumbcontainer.children(), $.proxy(function (e) {
 
             // find relative slider
             this._identifier = $(e.target).closest('.' + options.thumbContainerClass).data('slider-id');
@@ -130,7 +131,7 @@
             // get index of clicked thumbnail
             var index = $(e.target).parent().is(this._thumbcontent._thumbcontainer) ? $(e.target).index() : $(e.target).parent().index();
 
-            if (options.thumbPrerendered) {
+            if (options.thumbsPrerendered) {
                 // slide to slide :)
                 $('[data-slider-id=' + this._identifier + ']').trigger('to.owl.carousel', index);
             } else {
@@ -152,7 +153,14 @@
         var options = this.owl.options;
 
         //create thumbcontainer
-        this._thumbcontent._thumbcontainer = $('<div>').addClass(options.thumbContainerClass).appendTo(this.$element);
+        if (!options.thumbsPrerendered) {
+            this._thumbcontent._thumbcontainer = $('<div>').addClass(options.thumbContainerClass).appendTo(this.$element);
+        } else {
+            this._thumbcontent._thumbcontainer = $('.' + options.thumbContainerClass + '');
+            if(options.moveThumbsInside){
+                this._thumbcontent._thumbcontainer.appendTo(this.$element);
+            }
+        }
 
         //create thumb items
         var i;
@@ -184,8 +192,7 @@
         var options = this.owl.options;
 
         // set relative thumbnail container
-        var thumbContainer = options.thumbPrerendered ? $('.' + options.thumbContainerClass + '[data-slider-id="' + this._identifier + '"]') : this._thumbcontent._thumbcontainer;
-
+        var thumbContainer = options.thumbsPrerendered ? $('.' + options.thumbContainerClass + '[data-slider-id="' + this._identifier + '"]') : this._thumbcontent._thumbcontainer;
         thumbContainer.children().filter('.active').removeClass('active');
         thumbContainer.children().eq(this.owl_currentitem).addClass('active');
     };
