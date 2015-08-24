@@ -133,7 +133,7 @@
 
             if (options.thumbsPrerendered) {
                 // slide to slide :)
-                $('[data-slider-id=' + this._identifier + ']').trigger('to.owl.carousel', index);
+                $('[data-slider-id=' + this._identifier + ']').trigger('to.owl.carousel', [index, options.dotsSpeed, true]);
             } else {
                 this.owl.to(index, options.dotsSpeed);
             }
