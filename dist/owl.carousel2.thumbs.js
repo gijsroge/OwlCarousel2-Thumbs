@@ -1,4 +1,4 @@
-/*! owl.carousel2.thumbs - v0.1.4 | (c) 2015 @gijsroge | MIT license | https://github.com/gijsroge/OwlCarousel2-Thumbs */
+/*! owl.carousel2.thumbs - v0.1.5 | (c) 2015 @gijsroge | MIT license | https://github.com/gijsroge/OwlCarousel2-Thumbs */
 /**
  * Thumbs Plugin
  * @version 2.0.0
@@ -134,7 +134,7 @@
 
             if (options.thumbsPrerendered) {
                 // slide to slide :)
-                $('[data-slider-id=' + this._identifier + ']').trigger('to.owl.carousel', index);
+                $('[data-slider-id=' + this._identifier + ']').trigger('to.owl.carousel', [index, options.dotsSpeed, true]);
             } else {
                 this.owl.to(index, options.dotsSpeed);
             }
