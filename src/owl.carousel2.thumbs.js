@@ -1,3 +1,4 @@
+/*! owl.carousel2.thumbs - v0.1.5 | (c) 2015 @gijsroge | MIT license | https://github.com/gijsroge/OwlCarousel2-Thumbs */
 /**
  * Thumbs Plugin
  * @version 2.0.0
@@ -129,7 +130,7 @@
             this._identifier = $(e.target).closest('.' + options.thumbContainerClass).data('slider-id');
 
             // get index of clicked thumbnail
-            var index = $(e.target).parent().is(this._thumbcontent._thumbcontainer) ? $(e.target).index() : $(e.target).parent().index();
+            var index = $(e.target).parent().is(this._thumbcontent._thumbcontainer) ? $(e.target).index() : $(e.target).closest('.'+options.thumbItemClass).index();
 
             if (options.thumbsPrerendered) {
                 // slide to slide :)
