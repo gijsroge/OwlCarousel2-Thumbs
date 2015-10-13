@@ -8,7 +8,7 @@
     }
   ],
   "description": "Enables thumbnail support for Owl Carousel 2.0",
-  "main": "dist/owl.thumbs.js",
+  "main": "dist/owl.carousel2.thumbs.min.js",
   "license": "MIT",
   "keywords": [
     "Owl",
