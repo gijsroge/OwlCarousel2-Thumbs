@@ -2,7 +2,7 @@
 Enables thumbnail support for Owl Carousel 2.0
 
 ## Quick start
-grab the [latest release](https://github.com/gijsroge/OwlCarousel2-Thumbs/archive/0.1.6.tar.gz) and slam it behind the default owl carousel plugin.
+grab the [latest release](https://github.com/gijsroge/OwlCarousel2-Thumbs/archive/0.1.7.tar.gz) and slam it behind the default owl carousel plugin.
 
 ##### Enable thumbs
 ```javascript
