@@ -1,6 +1,6 @@
 {
   "name": "owl.carousel2.thumbs",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "homepage": "https://github.com/gijsroge/OwlCarousel2-Thumbs",
   "authors": [
     { "name" : "Gijs Rogé",
@@ -27,7 +27,7 @@
     "Gruntfile.js"
   ],
   "repository" :
-  { 
+  {
     "type" : "git",
     "url" : "https://github.com/gijsroge/OwlCarousel2-Thumbs"
   }
