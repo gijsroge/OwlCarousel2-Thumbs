@@ -61,7 +61,7 @@ $(document).ready(function(){
     thumbImage: false,
 
     // Enable this if you have pre-rendered thumbnails in your html instead of letting this plugin generate them. This is recommended as it will prevent FOUC
-    thumbPrerendered: true,
+    thumbsPrerendered: true,
     
     // Class that will be used on the thumbnail container
     thumbContainerClass: 'owl-thumbs',
