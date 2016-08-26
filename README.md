@@ -12,18 +12,8 @@ $(document).ready(function(){
   });
 });
 ```
-##### Add data-thumb attribute to your slides
-```html
-<div class="owl-carousel">
-    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
-    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
-    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
-    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
-</div>
-```
 
-
-## User pre-rendered html as thumbnails. **_recommended_**
+## Use pre-rendered html as thumbnails. **_recommended_**
 ```javascript
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
@@ -32,6 +22,7 @@ $(document).ready(function(){
   });
 });
 ```
+
 ##### Add thumbnails (link slider and thumbnails with data-slider-id attribute)
 ```html
 <div class="owl-carousel" data-slider-id="1">
@@ -45,6 +36,16 @@ $(document).ready(function(){
     <button class="owl-thumb-item">slide 2</button>
     <button class="owl-thumb-item">slide 3</button>
     <button class="owl-thumb-item">slide 4</button>
+</div>
+```
+
+## Or add data-thumb attribute to your slides
+```html
+<div class="owl-carousel">
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
+    <div data-thumb='Content of your thumbnail (can be anything)'> Your Content </div>
 </div>
 ```
 
