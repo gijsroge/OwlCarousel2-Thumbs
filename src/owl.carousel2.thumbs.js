@@ -55,6 +55,18 @@
 
 
         /**
+         * Youtube thumbnail builder
+         */
+        this.ytThumb = function(url){
+            var youtube_video_id = url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+
+            if (youtube_video_id.length == 11) {
+                return $('<img src="http://img.youtube.com/vi/'+youtube_video_id+'/0.jpg">');
+            }
+        }
+
+
+        /**
          * All event handlers.
          * @protected
          * @type {Object}
@@ -67,6 +79,9 @@
                     }
                 } else if (e.namespace && this.owl.options.thumbs && this.owl.options.thumbImage) {
                     var innerImage = $(e.content).find('img');
+                    if(!innerImage[0]){
+                        innerImage = this.ytThumb($(e.content).data('video'));
+                    }
                     this._thumbcontent.push(innerImage);
                 }
             }, this),
