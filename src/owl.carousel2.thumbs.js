@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Thumbs Plugin
  * @version 2.0.0
  * @author Gijs RogÃ©
@@ -89,7 +89,7 @@
         };
 
         // set default options
-        this.owl.options = $.extend(Thumbs.Defaults, this.owl.options);
+        this.owl.options = $.extend({}, Thumbs.Defaults, this.owl.options);
 
         // register the event handlers
         this.owl.$element.on(this._handlers);

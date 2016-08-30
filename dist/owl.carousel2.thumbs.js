@@ -1,4 +1,4 @@
-/*! owl.carousel2.thumbs - v0.1.7 | (c) 2016 @gijsroge | MIT license | https://github.com/gijsroge/OwlCarousel2-Thumbs */
+/*! owl.carousel2.thumbs - v0.1.8 | (c) 2016 @gijsroge | MIT license | https://github.com/gijsroge/OwlCarousel2-Thumbs */
 /**
  * Thumbs Plugin
  * @version 2.0.0
@@ -90,7 +90,7 @@
         };
 
         // set default options
-        this.owl.options = $.extend(Thumbs.Defaults, this.owl.options);
+        this.owl.options = $.extend({}, Thumbs.Defaults, this.owl.options);
 
         // register the event handlers
         this.owl.$element.on(this._handlers);
